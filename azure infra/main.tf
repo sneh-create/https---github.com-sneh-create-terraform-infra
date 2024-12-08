@@ -33,7 +33,7 @@ resource "azurerm_linux_virtual_machine" "testvm" {
 
   admin_ssh_key {
     username   = "adminuser"
-    public_key = file("tf-key.pub")
+    public_key = file("/Users/snehsrivastava/terraform_practice/secrets/tf-key.pub")
   }
 
   os_disk {
@@ -47,4 +47,7 @@ resource "azurerm_linux_virtual_machine" "testvm" {
     sku       = "22_04-lts"
     version   = "latest"
   }
+  custom_data = filebase64("install.sh")
+
 }
+

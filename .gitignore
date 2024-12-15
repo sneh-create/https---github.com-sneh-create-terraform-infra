@@ -5,3 +5,5 @@ azure infra/.terraform.lock.hcl
 azure infra/terraform.tfstate
 azure infra/terraform.tfstate.backup
 subnet divi
+azuremulti/.terraform
+azuremulti/.terraform.lock.hcl

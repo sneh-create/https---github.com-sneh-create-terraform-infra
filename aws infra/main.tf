@@ -47,6 +47,7 @@ resource "aws_instance" "my_instance" {
     tags = {
         Name = "jenkins_tf"
     }
+    
     user_data = file("jenkins.sh")
     #user_data = <<-EOF
     #!/bin/bash

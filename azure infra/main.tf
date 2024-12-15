@@ -19,6 +19,34 @@ resource "azurerm_network_interface" "testnic" {
     name                          = "internal"
     subnet_id                     = data.azurerm_subnet.subtest.id
     private_ip_address_allocation = "Dynamic"
+    public_ip_address_id          = azurerm_public_ip.testpubid.id
+  }
+}
+resource "azurerm_public_ip" "testpubid" {
+  name                = "tflinuxpublicip"
+  location            = data.azurerm_virtual_network.nwtest.location
+  resource_group_name = data.azurerm_resource_group.test.name
+  allocation_method   = "Static"
+}
+
+resource "azurerm_network_security_group" "testnsg" {
+  name                = "tflinuxnsg"
+  location            = data.azurerm_virtual_network.nwtest.location
+  resource_group_name = data.azurerm_resource_group.test.name
+  security_rule {
+    name                       = "Allowhttp"
+    priority                   = 100
+    direction                  = "Inbound"
+    access                     = "Allow"
+    protocol                   = "Tcp"
+    source_port_range          = "*"
+    destination_port_range     = "80"
+    source_address_prefix      = "*"
+    destination_address_prefix = "*"
+  }
+
+  tags = {
+    environment = "staging"
   }
 }
 resource "azurerm_linux_virtual_machine" "testvm" {
@@ -35,6 +63,7 @@ resource "azurerm_linux_virtual_machine" "testvm" {
     username   = "adminuser"
     public_key = file("/Users/snehsrivastava/terraform_practice/secrets/tf-key.pub")
   }
+
 
   os_disk {
     caching              = "ReadWrite"

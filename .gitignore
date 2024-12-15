@@ -1,2 +1,7 @@
 /Users/snehsrivastava/terraform_practice/secrets
 secrets/
+azure infra/.terraform
+azure infra/.terraform.lock.hcl
+azure infra/terraform.tfstate
+azure infra/terraform.tfstate.backup
+subnet divi

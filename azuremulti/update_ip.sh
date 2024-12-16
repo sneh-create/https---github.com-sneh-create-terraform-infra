@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Paths to the inventory files
-INVENTORY_DEV="/Users/snehsrivastava/terraform_practice/ansible/inventories/dev"
-INVENTORY_STG="/Users/snehsrivastava/terraform_practice/ansible/inventories/stg"
-INVENTORY_PRD="/Users/snehsrivastava/terraform_practice/ansible/inventories/prd"
+INVENTORY_DEV="ansible/inventories/dev"
+INVENTORY_STG="ansible/inventories/stg"
+INVENTORY_PRD="ansible/inventories/prd"
 
 # Terraform output JSON file
 TERRAFORM_OUTPUT="terraform_output.json"
@@ -42,7 +42,7 @@ generate_inventory() {
   # Add group variables
   echo -e "\n[${env}servers:vars]" >> "$inventory_file"
   echo "ansible_user=adminuser" >> "$inventory_file"
-  echo "ansible_ssh_private_key_file=/Users/snehsrivastava/terraform_practice/secrets/tf-key" >> "$inventory_file"
+  echo "ansible_ssh_private_key_file=tf-key" >> "$inventory_file"
   echo "ansible_python_interpreter=/usr/bin/python3" >> "$inventory_file"
 
   echo "Updated inventory for $env: $inventory_file"

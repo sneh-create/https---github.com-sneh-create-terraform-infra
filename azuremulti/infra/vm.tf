@@ -76,7 +76,7 @@ resource "azurerm_linux_virtual_machine" "testvm" {
 
   admin_ssh_key {
     username   = "adminuser"
-    public_key = file("/Users/snehsrivastava/terraform_practice/secrets/tf-key.pub")
+    public_key = file("tf-key.pub")
   }
 
 

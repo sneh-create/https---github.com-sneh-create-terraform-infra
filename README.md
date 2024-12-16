@@ -14,6 +14,9 @@ This project demonstrates the integration of **Terraform** and **Ansible** to au
    - Parses Terraform outputs to dynamically update the Ansible inventory file.
 
 ---
+## **Project Architecture**
+
+<img width="977" alt="Screenshot 2024-12-16 at 5 44 47 PM" src="https://github.com/user-attachments/assets/5c0396f7-995f-4c89-88a2-e190fe423326" />
 
 ## **Project Structure**
 ```

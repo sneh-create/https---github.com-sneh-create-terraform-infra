@@ -1,0 +1,8 @@
+[devservers]
+server1 ansible_host=104.43.196.189
+server2 ansible_host=104.43.197.21
+
+[devservers:vars]
+ansible_user=adminuser
+ansible_ssh_private_key_file=/Users/snehsrivastava/terraform_practice/secrets/tf-key
+ansible_python_interpreter=/usr/bin/python3

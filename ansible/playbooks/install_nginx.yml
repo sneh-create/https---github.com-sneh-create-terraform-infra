@@ -1,0 +1,6 @@
+-
+  name: Install Nginx roles
+  hosts: devservers
+  become: yes
+  roles:
+    - nginx-role

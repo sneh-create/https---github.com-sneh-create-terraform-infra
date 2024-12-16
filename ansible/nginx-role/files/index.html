@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.2em;
+        }
+
+        nav {
+            margin-top: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .about, .projects, .contact {
+            margin-bottom: 40px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .about h2, .projects h2, .contact h2 {
+            margin: 0;
+            padding: 20px;
+            background: #4facfe;
+            color: white;
+            text-align: center;
+        }
+
+        .about p, .contact p {
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .projects .project {
+            display: flex;
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .projects .project:last-child {
+            border-bottom: none;
+        }
+
+        .projects img {
+            max-width: 200px;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+
+        .projects h3 {
+            margin: 0;
+        }
+
+        .projects p {
+            margin: 5px 0 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .projects .project {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .projects img {
+                margin: 0 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to My Portfolio</h1>
+    <p>Showcasing my journey, skills, and projects</p>
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="about" class="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm a passionate professional skilled in cloud technologies, DevOps, and scripting. I specialize in deploying scalable infrastructure, optimizing workflows, and building modern solutions for today’s challenges. Let’s innovate together!</p>
+</section>
+
+<section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="project">
+        <img src="https://via.placeholder.com/200" alt="Project 1">
+        <div>
+            <h3>Azure DevOps Pipeline</h3>
+            <p>Automated deployment pipelines for managing cloud infrastructure using Terraform and Azure DevOps.</p>
+        </div>
+    </div>
+    <div class="project">
+        <img src="https://via.placeholder.com/200" alt="Project 2">
+        <div>
+            <h3>Dockerized Web Application</h3>
+            <p>Developed and deployed a containerized Django web application, ensuring high availability and scalability.</p>
+        </div>
+    </div>
+    <div class="project">
+        <img src="https://via.placeholder.com/200" alt="Project 3">
+        <div>
+            <h3>Kubernetes Implementation</h3>
+            <p>Designed a Kubernetes cluster to manage microservices architecture with monitoring and alerting solutions.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Feel free to reach out to me for collaboration, consultation, or just to connect!</p>
+    <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/sneh-srivastava-241b9b21">linkedin.com/in/sneh-srivastava</a></p>
+</section>
+
+<footer>
+    &copy; 2024 Sneh Srivastava. All rights reserved.
+</footer>
+
+</body>
+</html>
